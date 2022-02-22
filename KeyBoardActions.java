@@ -19,7 +19,7 @@ public class KeyBoardActions {
 		
 		driver.get("https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en");
 		driver.findElement(By.xpath("//*[@id=\"yDmH0d\"]/c-wiz/div/div[2]/div[2]/div/main/c-wiz/div[1]/div[1]/div[3]/div/div/article/a")).click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		
 		Set<String>windowIDs=driver.getWindowHandles();
 		
@@ -28,7 +28,7 @@ public class KeyBoardActions {
 		
 		driver.switchTo().window(childWindowID);
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		Actions act = new Actions(driver);
 		
 		//Select all using CTRL+a
@@ -53,7 +53,7 @@ public class KeyBoardActions {
 		
 		driver.get("https://www.rapidtables.com/tools/notepad.html");
 		
-		//Paste news in notepad
+		//Paste news in note
 		act.keyDown(Keys.CONTROL);
 		act.sendKeys("v");
 		act.keyUp(Keys.CONTROL);
